@@ -1,0 +1,98 @@
+<h1 class="first">From Here you can signup</h1>
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://st2.depositphotos.com/1001599/43046/v/380/depositphotos_430460192-stock-illustration-sign-page-abstract-concept-vector.jpg?forcejpeg=true"
+            class="img-fluid" alt="Phone image">
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+               <!-- Name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form1Example13">Your full name</label>
+              </div>
+                <input
+                formControlName="name"
+                type="text"
+                 id="form1Example13" 
+                 class="form-control form-control-lg" 
+                 placeholder="your name" 
+                  />
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form1Example13">Email address</label>
+              <input
+              formControlName="email"
+               type="email" 
+               id="form1Example13" 
+               class="form-control form-control-lg"
+              placeholder="your email" 
+                 />
+              
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form1Example23">Password</label>
+              <input 
+              formControlName="password"
+              type="password" 
+              id="form1Example23" 
+              class="form-control form-control-lg" 
+              placeholder="your password" 
+               />
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form1Example23">adresse</label>
+              <input 
+              formControlName="adresse"
+              type="adresse" 
+              id="form1Example23" 
+              class="form-control form-control-lg" 
+              placeholder="your adresse" 
+               />
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form1Example23">Phone</label>
+              <input 
+              formControlName="Phone"
+              type="Phone" 
+              id="form1Example23" 
+              class="form-control form-control-lg" 
+              placeholder="your Phone" 
+               />
+            </div>
+
+            
+  
+            <!-- role input
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form1Example13">Email address</label>
+            <input
+            formControlName="role"
+             type="email" 
+             id="form1Example13" 
+             class="form-control form-control-lg"
+            placeholder="your email" 
+               />
+            
+          </div> -->
+  
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-left: 0%;">SignUp</button>
+  
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0 text-muted"></p>
+            </div>
+  
+            
+             
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -10,6 +10,10 @@ import { CommentComponent } from './comment/comment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyProductComponent } from './my-product/my-product.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+// import { ContentPagesRoutingModule } from "./content-pages-routing.module";
+import { CommonModule } from "@angular/common";
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,9 @@ import { MyProductComponent } from './my-product/my-product.component';
     HomePageComponent,
     SearchComponent,
     CommentComponent,
-    MyProductComponent
+    MyProductComponent,
+    RegisterComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -26,7 +32,9 @@ import { MyProductComponent } from './my-product/my-product.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule ,
-    ReactiveFormsModule  
+    ReactiveFormsModule,
+    CommonModule,
+    // ContentPagesRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

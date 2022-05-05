@@ -27,41 +27,43 @@ var add = function (req, res){
 }
 
 let signup = async (req,res)=>{
-  const { image } = req.body;
-  await cloudinary.uploader.upload(image, (err, result) => {
-    if (err) {
-      res.send(err);
-    } 
-    else {
-      console.log("inside else signup")
-      const url = result.secure_url;
-      console.log(url);
-      res.send(url);
+  // const { image } = req.body;
+  // await cloudinary.uploader.upload(image, (err, result) => {
+  //   if (err) {
+  //     res.send(err);
+  //   } 
+  //   else {
+  //     console.log("inside else signup")
+  //     const url = result.secure_url;
+  //     console.log(url);
+  //     res.send(url);
+  
       const newUser = new User({
         email: req.body.email,
         username: req.body.username,
-        image:url,
-        address: req.body.address,
-        phone: req.body.phone,
+        // image:url,
+        // address: req.body.address,
+        // phone: req.body.phone,
         password: bcrypt.hashSync(req.body.password, 10)
       })
       newUser
       .save()
       .then(user =>{
-        let cart = new Cart({
-          user_id: user._id ,
-          listProduct: [] ,
-          total: 0,
-          status: "vide",
-          })
-        cart
-        .save()
-        .then(cart=>res.send('cart added'))
+        console.log(user)
+        // let cart = new Cart({
+        //   user_id: user._id ,
+        //   listProduct: [] ,
+        //   total: 0,
+        //   status: "vide",
+        //   })
+        // cart
+        // .save()
+        // .then(cart=>res.send('cart added'))
      })
       .catch(err=>res.send(err))
     }
-  });
-};
+  //});
+//};
 
   var login = function (req, res){
     User.findOne({username: req.body.username}, (err, user) => {
